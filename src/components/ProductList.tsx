@@ -1,6 +1,6 @@
 import React from "react";
 import { FlatList } from "react-native";
-import { Box, Text, VStack, Center } from "native-base";
+import { Box, Text, VStack, Center } from "@gluestack-ui/themed-native-base";
 import { ProductItem } from "./ProductItem";
 
 interface ProductListProps {

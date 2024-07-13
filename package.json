@@ -10,15 +10,14 @@
   },
   "dependencies": {
     "@expo/metro-runtime": "~3.2.1",
+    "@gluestack-ui/themed-native-base": "^0.1.108",
     "expo": "~51.0.20",
     "expo-status-bar": "~1.12.1",
-    "native-base": "^3.4.28",
-    "normalize-css-color": "^1.0.2",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-native": "0.74.3",
     "react-native-safe-area-context": "3.3.2",
-    "react-native-svg": "12.1.1",
+    "react-native-svg": "^13.4.0",
     "react-native-web": "~0.19.10"
   },
   "devDependencies": {

@@ -1,5 +1,5 @@
 import React from "react";
-import { Text, Image, HStack, VStack } from "native-base";
+import { Text, Image, HStack, VStack } from "@gluestack-ui/themed-native-base";
 
 export interface ProductItemProps {
   product: ProductProps;
