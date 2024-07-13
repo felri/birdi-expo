@@ -1,17 +1,13 @@
 import React, { useState, useEffect } from "react";
-import {
-  Box,
-  Text,
-  Input,
-  Pressable,
-  FlatList,
-  Spinner,
-  VStack,
-  Center,
-} from "native-base";
 import { ProductProps } from "../components/ProductItem";
 import { ProductList } from "../components/ProductList";
 import { SearchItem } from "../components/SearchItem";
+import {
+  Text,
+  Pressable,
+  Spinner,
+  VStack,
+} from "@gluestack-ui/themed-native-base";
 
 export const Search = () => {
   const [products, setProducts] = useState([]);
@@ -21,6 +17,7 @@ export const Search = () => {
 
   const fetchData = async () => {
     setLoading(true);
+    setSearch("");
     try {
       const response = await fetch("https://api.sampleapis.com/coffee/hot");
       const data = await response.json();
