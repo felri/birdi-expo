@@ -45,7 +45,7 @@ export const Search = () => {
   };
 
   return (
-    <VStack flex={1} padding={4} width="100%" alignSelf="stretch">
+    <VStack flex={1} padding="16px" width="100%" alignSelf="stretch">
       <Text fontSize="2xl" fontWeight="bold" color="#0047FF" marginBottom={4} textAlign={"center"}>
         Coffee Page
       </Text>
@@ -63,9 +63,9 @@ export const Search = () => {
         alignItems="center"
         position="absolute"
         bottom={4}
-        width="90%"
-        right="5%"
-        left="5%"
+        alignSelf="center"
+        right="32px"
+        left="32px"
       >
         <Text color="#fff" fontSize="md">
           Refresh
