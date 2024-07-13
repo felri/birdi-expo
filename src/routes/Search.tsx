@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from "react";
 import {
-  View,
+  Box,
   Text,
-  TextInput,
+  Input,
   Pressable,
   FlatList,
-  ActivityIndicator,
-  StyleSheet,
-  Image,
-} from "react-native";
+  Spinner,
+  VStack,
+  Center,
+} from "native-base";
 import { ProductProps } from "../components/ProductItem";
 import { ProductList } from "../components/ProductList";
 import { SearchItem } from "../components/SearchItem";
@@ -45,48 +45,33 @@ export const Search = () => {
   };
 
   return (
-    <View style={styles.container}>
-      <Text style={styles.title}>Coffee Page</Text>
+    <VStack flex={1} padding={4} width="100%" alignSelf="stretch">
+      <Text fontSize="2xl" fontWeight="bold" color="#0047FF" marginBottom={4} textAlign={"center"}>
+        Coffee Page
+      </Text>
       <SearchItem search={search} setSearch={handleSearch} />
       {loading ? (
-        <ActivityIndicator size="large" color="#0047FF" />
+        <Spinner size="lg" color="#0047FF" />
       ) : (
         <ProductList products={filteredProducts} />
       )}
-      <Pressable onPress={fetchData} style={styles.button}>
-        <Text style={styles.buttonText}>Refresh</Text>
+      <Pressable
+        onPress={fetchData}
+        bg="#0047FF"
+        padding={4}
+        borderRadius={8}
+        alignItems="center"
+        position="absolute"
+        bottom={4}
+        width="90%"
+        right="5%"
+        left="5%"
+      >
+        <Text color="#fff" fontSize="md">
+          Refresh
+        </Text>
       </Pressable>
-    </View>
+    </VStack>
   );
 };
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    padding: 16,
-    width: "100%",
-    alignSelf: "stretch", // Add this line to make the container take all the width space
-  },
-  title: {
-    fontSize: 24,
-    fontWeight: "bold",
-    textAlign: "center",
-    color: "#0047FF",
-    marginBottom: 16,
-  },
-  button: {
-    backgroundColor: "#0047FF",
-    padding: 16,
-    borderRadius: 8,
-    alignItems: "center",
-    position: "absolute",
-    bottom: 16,
-    width: "90%",
-    right: "5%",
-    left: "5%",
-  },
-  buttonText: {
-    color: "#fff",
-    fontSize: 16,
-  },
-});
