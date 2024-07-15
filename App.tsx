@@ -1,25 +1,17 @@
 import React from "react";
 import { StatusBar } from "expo-status-bar";
-import { StyleSheet, View } from "react-native";
+import { NativeBaseProvider, Box, Center } from "@gluestack-ui/themed-native-base";
 import { Search } from "./src/routes/Search";
-import { NativeBaseProvider } from "@gluestack-ui/themed-native-base";
 
 export default function App() {
   return (
     <NativeBaseProvider>
-      <View style={styles.container}>
-        <Search />
-        <StatusBar style="auto" />
-      </View>
+      <Box flex={1} bg="#fff">
+        <Center flex={1}>
+          <Search />
+          <StatusBar style="auto" />
+        </Center>
+      </Box>
     </NativeBaseProvider>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-});

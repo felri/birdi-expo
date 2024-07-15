@@ -29,7 +29,7 @@ export const ProductList: React.FC<ProductListProps> = ({ products }) => {
           <ProductItem product={item} />
         </Box>
       )}
-      contentContainerStyle={{ paddingBottom: 42 }}
+      contentContainerStyle={{ paddingBottom: 80 }}
     />
   );
 };
